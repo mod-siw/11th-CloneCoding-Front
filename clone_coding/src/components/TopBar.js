@@ -10,16 +10,35 @@ import logo from "../images/logo.png";
 const TopBar = () => {
   const navigate = useNavigate();
 
+  const [selectedCategory, setSelectedCategory] = useState("중고거래");
+
+  const handleCategoryClick = (category) => {
+    setSelectedCategory(category);
+  };
+
+  // 더미 카테고리 데이터
+  const categories = [
+    "중고거래",
+    "동네가게",
+    "알바",
+    "부동산 직거래",
+    "중고차 직거래",
+  ];
+
   return (
     <Container>
       <CateDiv>
         <Logo src={logo} />
         <Category>
-          <CateLi>중고거래</CateLi>
-          <CateLi>동네가게</CateLi>
-          <CateLi>알바</CateLi>
-          <CateLi>부동산 직거래</CateLi>
-          <CateLi>중고차 직거래</CateLi>
+          {categories.map((category) => (
+            <CateLi
+              key={category}
+              onClick={() => handleCategoryClick(category)}
+              isSelected={selectedCategory === category}
+            >
+              {category}
+            </CateLi>
+          ))}
         </Category>
       </CateDiv>
       <SearchingDiv>
@@ -83,6 +102,12 @@ const CateLi = styled.li`
   margin-right: 30px;
   font-size: 18px;
   font-weight: 600;
+
+  cursor: pointer;
+  &:hover {
+    color: #81868f;
+  }
+  color: ${(props) => (props.isSelected ? "#ff6f0f" : "#000")};
 `;
 
 const SearchingDiv = styled.div`
