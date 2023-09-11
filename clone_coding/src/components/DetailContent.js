@@ -5,22 +5,25 @@ import styled from "styled-components";
 //components
 
 //images
-import cover from "../images/cover1.png";
+// import cover from "../images/cover1.png";
 
-const DetailContent = () => {
-  const navigate = useNavigate();
+const DetailContent = ({ item }) => {
+  if (!item) {
+    return null; // item이 없을 경우 아무것도 렌더링하지 않음
+  }
+  console.log(item);
 
   return (
     <Container>
-      <Cover src={cover} />
+      <Cover src={item.cover} />
       <Text>
-        <Title>먹태깡 팔아요</Title>
-        <Price>1000원</Price>
-        <Place>경남 진주시 초천동</Place>
+        <Title>{item.title}</Title>
+        <Price>{item.price}원</Price>
+        <Place>{item.place}</Place>
         <ReactionDiv>
-          <Attention>관심 11</Attention>
+          <Attention>관심 {item.attention}</Attention>
           {"  .  "}
-          <Chatting>채팅 45</Chatting>
+          <Chatting>채팅 {item.chatting}</Chatting>
         </ReactionDiv>
       </Text>
     </Container>

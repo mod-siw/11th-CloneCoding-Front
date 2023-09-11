@@ -6,8 +6,8 @@ import styled from "styled-components";
 import TopBar from "../components/TopBar";
 
 //images
-import cover from "../images/cover1.png";
 import profile from "../images/profile_img/profile1.png";
+import cover from "../images/cover1.png";
 
 const DetailPage = () => {
   const navigate = useNavigate();
@@ -170,8 +170,6 @@ const Content = styled.div`
   margin: 16px 0px;
 `;
 
-const Watching = styled.div``;
-
 const GrayText = styled.div`
   display: flex;
   font-size: 13px;
@@ -181,7 +179,3 @@ const GrayText = styled.div`
   font-size: 12px;
   margin-right: 4px;
 `;
-
-const Attention = styled.div``;
-
-const Chatting = styled.div``;
