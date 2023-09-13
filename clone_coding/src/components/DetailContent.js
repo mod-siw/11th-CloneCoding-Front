@@ -8,13 +8,18 @@ import styled from "styled-components";
 // import cover from "../images/cover1.png";
 
 const DetailContent = ({ item }) => {
+  const navigate = useNavigate();
   if (!item) {
     return null; // item이 없을 경우 아무것도 렌더링하지 않음
   }
-  console.log(item);
+
+  const handleDetailPage = (post_id) => {
+    console.log("되는 중...");
+    navigate(`/articles/${post_id}`);
+  };
 
   return (
-    <Container>
+    <Container onClick={() => handleDetailPage(item.post_id)}>
       <Cover src={item.cover} />
       <Text>
         <Title>{item.title}</Title>
@@ -39,6 +44,7 @@ const Container = styled.div`
   width: 240px;
 
   margin-bottom: 36px;
+  cursor: pointer;
 `;
 
 const Font = styled.div`

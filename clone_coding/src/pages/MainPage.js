@@ -41,6 +41,51 @@ const data = [
     attention: 13,
     chatting: 16,
   },
+  {
+    post_id: 4,
+    cover: cover3,
+    title: "뭔가를 팔까해요",
+    price: 1500,
+    place: "통영시",
+    attention: 13,
+    chatting: 16,
+  },
+  {
+    post_id: 5,
+    cover: cover3,
+    title: "무료나눔합니다",
+    price: 1500,
+    place: "제주시",
+    attention: 13,
+    chatting: 16,
+  },
+  {
+    post_id: 6,
+    cover: cover3,
+    title: "이게 맞나 싶어요",
+    price: 1500,
+    place: "통영시",
+    attention: 13,
+    chatting: 16,
+  },
+  {
+    post_id: 7,
+    cover: cover3,
+    title: "데이터 언제 다 쌓지",
+    price: 1500,
+    place: "통영시",
+    attention: 13,
+    chatting: 16,
+  },
+  {
+    post_id: 8,
+    cover: cover3,
+    title: "뭔가를 팝니다",
+    price: 1500,
+    place: "통영시",
+    attention: 13,
+    chatting: 16,
+  },
 ];
 
 const MainPage = () => {
@@ -48,9 +93,6 @@ const MainPage = () => {
 
   const [datalist, setDatalist] = useState(data);
 
-  const handleDetailPlaylist = (post_id) => {
-    navigate(`/detail/${post_id}`);
-  };
   return (
     <>
       <TopBar />
@@ -70,19 +112,8 @@ const MainPage = () => {
           <Text>중고거래 인기매물</Text>
           <ArticleList>
             {datalist.map((item, index) => (
-              <DetailContent
-                key={index}
-                onClick={() => handleDetailPlaylist(item.post_id)}
-                item={item}
-                //위에 정보 넘기는 거 어떻게 할지 잘 골라보기
-              />
+              <DetailContent key={index} item={item} />
             ))}
-            <DetailContent />
-            <DetailContent />
-            <DetailContent />
-            <DetailContent />
-            <DetailContent />
-            <DetailContent />
           </ArticleList>
         </Content>
       </Container>
