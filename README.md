@@ -1,13 +1,20 @@
 # 11th-CloneCoding-Front
 이화여대 멋사 11기 프론트엔드 클론코딩 스터디
 >
+> #### 개발자 소개
+> |변지혜|
+> |:------:|
+>|<img src="https://github.com/mod-siw/11th-CloneCoding-Front/assets/127821462/6dc314ca-65ca-48ac-aebe-894e44ffe48c" width="150" height="150"/>|
+> |프론트엔드|
 > #### 개발 기간 
 > 2023.09.09. ~ 
 > #### 배포 주소
 > [11th_daangn_clonecoding](https://daangn-clone-coding.vercel.app/)
-> #### 사용 스택
-> ##### Development 
-><img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=white">
+ ### 사용 스택
+  ##### Environment
+  <img src="https://img.shields.io/badge/visualstudiocode-007ACC?style=for-the-badge&logo=git&logoColor=white"> <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white"> <img src="https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white">
+ ##### Development 
+<img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=white">
 
 
 ## 구현 기능 
