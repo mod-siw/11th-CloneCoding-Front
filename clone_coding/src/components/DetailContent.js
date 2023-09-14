@@ -14,7 +14,6 @@ const DetailContent = ({ item }) => {
   }
 
   const handleDetailPage = (post_id) => {
-    console.log("되는 중...");
     navigate(`/articles/${post_id}`);
   };
 

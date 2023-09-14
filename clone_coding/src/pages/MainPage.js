@@ -9,84 +9,8 @@ import DetailContent from "../components/DetailContent";
 //images
 import cover from "../images/coverimg.png";
 
-import cover1 from "../images/cover1.png";
-import cover2 from "../images/cover1.png";
-import cover3 from "../images/cover1.png";
-
-const data = [
-  {
-    post_id: 1,
-    cover: cover1,
-    title: "먹태깡 팝니다",
-    price: 1000,
-    place: "진주시",
-    attention: 11,
-    chatting: 13,
-  },
-  {
-    post_id: 2,
-    cover: cover2,
-    title: "불꽃남자의 농구공",
-    price: 2000,
-    place: "울산시",
-    attention: 21,
-    chatting: 17,
-  },
-  {
-    post_id: 3,
-    cover: cover3,
-    title: "뭔가를 팝니다",
-    price: 1500,
-    place: "통영시",
-    attention: 13,
-    chatting: 16,
-  },
-  {
-    post_id: 4,
-    cover: cover3,
-    title: "뭔가를 팔까해요",
-    price: 1500,
-    place: "통영시",
-    attention: 13,
-    chatting: 16,
-  },
-  {
-    post_id: 5,
-    cover: cover3,
-    title: "무료나눔합니다",
-    price: 1500,
-    place: "제주시",
-    attention: 13,
-    chatting: 16,
-  },
-  {
-    post_id: 6,
-    cover: cover3,
-    title: "이게 맞나 싶어요",
-    price: 1500,
-    place: "통영시",
-    attention: 13,
-    chatting: 16,
-  },
-  {
-    post_id: 7,
-    cover: cover3,
-    title: "데이터 언제 다 쌓지",
-    price: 1500,
-    place: "통영시",
-    attention: 13,
-    chatting: 16,
-  },
-  {
-    post_id: 8,
-    cover: cover3,
-    title: "뭔가를 팝니다",
-    price: 1500,
-    place: "통영시",
-    attention: 13,
-    chatting: 16,
-  },
-];
+//data
+import { data } from "../_mock/mock_data";
 
 const MainPage = () => {
   const navigate = useNavigate();
