@@ -24,16 +24,16 @@ export const data = [
   {
     post_id: 2,
     cover: cover2,
-    title: "불꽃남자의 농구공",
-    price: 2000,
-    place: "울산시",
+    title: "저와 함께하는 기린 인형",
+    price: 12000,
+    place: "서대문구",
     attention: 21,
     chatting: 17,
   },
   {
     post_id: 3,
     cover: cover3,
-    title: "뭔가를 팝니다",
+    title: "눈여겨보고 있는 보조배터리",
     price: 1500,
     place: "통영시",
     attention: 13,
@@ -42,7 +42,7 @@ export const data = [
   {
     post_id: 4,
     cover: cover4,
-    title: "뭔가를 팔까해요",
+    title: "티셔츠 팝니다",
     price: 1500,
     place: "통영시",
     attention: 13,
@@ -60,7 +60,7 @@ export const data = [
   {
     post_id: 6,
     cover: cover6,
-    title: "이게 맞나 싶어요",
+    title: "표지 이쁜 책 팔아요",
     price: 1500,
     place: "통영시",
     attention: 13,
@@ -69,7 +69,7 @@ export const data = [
   {
     post_id: 7,
     cover: cover7,
-    title: "데이터 언제 다 쌓지",
+    title: "헤어 앰플이어요",
     price: 1500,
     place: "통영시",
     attention: 13,
@@ -87,7 +87,7 @@ export const data = [
   {
     post_id: 9,
     cover: cover9,
-    title: "데이터 쌓기가 힘드러요",
+    title: "귀여운 팅클이 인형 소개합니다",
     price: 5000,
     place: "울산시",
     attention: 52,
@@ -96,7 +96,7 @@ export const data = [
   {
     post_id: 10,
     cover: cover10,
-    title: "그럴 듯하게 보이고 싶어요",
+    title: "많이 못해서 아쉬워요",
     price: 15000,
     place: "성주시",
     attention: 2,
@@ -105,7 +105,7 @@ export const data = [
   {
     post_id: 11,
     cover: cover11,
-    title: "데이터 쌓기가 힘드러요",
+    title: "하지만 프론트 최고 프론트 짱",
     price: 5000,
     place: "울산시",
     attention: 52,
@@ -114,10 +114,10 @@ export const data = [
   {
     post_id: 12,
     cover: cover12,
-    title: "그럴 듯하게 보이고 싶어요",
+    title: "최근의 고양이 행운 공유합니다",
     price: 15000,
-    place: "성주시",
-    attention: 2,
-    chatting: 1,
+    place: "이대 멋사 짱 프론트 ♥️",
+    attention: 2000,
+    chatting: 16000,
   },
 ];
