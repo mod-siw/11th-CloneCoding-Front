@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import styled from "styled-components";
 
 //components
@@ -9,44 +9,48 @@ import TopBar from "../components/TopBar";
 import profile from "../images/profile_img/profile1.png";
 import cover from "../images/cover1.png";
 
+//data
+import { data } from "../_mock/mock_data";
+
 const DetailPage = () => {
   const navigate = useNavigate();
+  const { post_id } = useParams();
+  console.log(post_id, data[post_id]);
 
   return (
     <Container>
       <TopBar />
-      <Cover src={cover} />
+      <Cover src={data[post_id - 1].cover} />
       <InfoDiv>
         <UserInfo>
-          <UserImg src={profile} />
+          <UserImg src={data[post_id - 1].profile} />
           <div style={{ marginLeft: "8px" }}>
-            <UserName>구름</UserName>
-            <UserPlace>경남 진주시 초천동</UserPlace>
+            <UserName>{data[post_id - 1].username}</UserName>
+            <UserPlace>{data[post_id - 1].place}</UserPlace>
           </div>
         </UserInfo>
         <MannerTemp>
-          <TempNum></TempNum>
-          <TempBar></TempBar>
+          <TempNum>{data[post_id - 1].temp}</TempNum>
+          <TempBar>
+            <TempColorbar></TempColorbar>
+          </TempBar>
           <TempIcon />
           <div>매너온도</div>
         </MannerTemp>
       </InfoDiv>
       <ContentDiv>
-        <Title>먹태깡 팔아요</Title>
+        <Title>{data[post_id - 1].title}</Title>
         <div style={{ marginTop: "4px", display: "flex" }}>
           <GrayText>기타 중고물품</GrayText>
           {" ∙ "}
           <GrayText>2일 전</GrayText>
         </div>
-        <Price>1000원</Price>
-        <Content>
-          파격 세일 천원!! 그리고 기분내키면 500원에 팔게여 9월7일 오후 5시에
-          샀습니다
-        </Content>
+        <Price>{data[post_id - 1].price}원</Price>
+        <Content>{data[post_id - 1].content}</Content>
         <GrayText>
-          <GrayText>관심 11</GrayText>
+          <GrayText>관심 {data[post_id - 1].attention}</GrayText>
           {" ∙ "}
-          <GrayText>채팅 45</GrayText>
+          <GrayText>채팅 {data[post_id - 1].chatting}</GrayText>
           {" ∙ "}
           <GrayText>조회 976</GrayText>
         </GrayText>
@@ -85,6 +89,8 @@ const Cover = styled.img`
   object-fit: cover;
 `;
 
+// 사용자 정보
+
 const InfoDiv = styled.div`
   width: 677px;
   margin: 0px auto;
@@ -100,7 +106,7 @@ const InfoDiv = styled.div`
   border-bottom: 1px solid rgb(233, 236, 239);
 `;
 
-const UserInfo = styled.div`
+const UserInfo = styled.section`
   display: flex;
 `;
 
@@ -126,23 +132,30 @@ const UserPlace = styled.div`
   color: #212529;
 `;
 
-const MannerTemp = styled.div``;
+// 매너온도
+
+const MannerTemp = styled.section``;
 
 const TempNum = styled.div``;
 
 const TempBar = styled.div``;
 
+const TempColorbar = styled.div``;
+
 const TempIcon = styled.div``;
 
-const ContentDiv = styled.div`
+// 글 관련
+
+const ContentDiv = styled.section`
   width: 677px;
-  padding: 32px 0px;
+  padding: 15px 0px;
   margin: 0px auto;
   border-bottom: 1px solid rgb(233, 236, 239);
 `;
 
 const Title = styled.h1`
-  font-size: 14px;
+  font-size: 20px;
+  font-weight: bold;
   letter-spacing: -0.02px;
   color: #212529;
   overflow: hidden;

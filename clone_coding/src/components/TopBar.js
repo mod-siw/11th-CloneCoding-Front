@@ -52,7 +52,7 @@ const TopBar = () => {
 export default TopBar;
 
 const Container = styled.div`
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -62,7 +62,6 @@ const Container = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  position: relative;
   background-color: #fff;
 
   height: 35px;

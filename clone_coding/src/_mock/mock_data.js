@@ -11,6 +11,8 @@ import cover10 from "../images/cover10.jpg";
 import cover11 from "../images/cover11.jpg";
 import cover12 from "../images/cover12.jpg";
 
+import profile1 from "../images/profile_img/profile1.png";
+
 export const data = [
   {
     post_id: 1,
@@ -20,6 +22,10 @@ export const data = [
     place: "진주시",
     attention: 11,
     chatting: 13,
+    username: "ㅎㅎ",
+    profile: profile1,
+    temp: 33,
+    content: "내용1",
   },
   {
     post_id: 2,
@@ -29,6 +35,10 @@ export const data = [
     place: "서대문구",
     attention: 21,
     chatting: 17,
+    username: "ㅎㅎ",
+    profile: profile1,
+    temp: 33,
+    content: "내용1",
   },
   {
     post_id: 3,
@@ -38,6 +48,10 @@ export const data = [
     place: "통영시",
     attention: 13,
     chatting: 16,
+    username: "ㅎㅎ",
+    profile: profile1,
+    temp: 33,
+    content: "내용1",
   },
   {
     post_id: 4,
@@ -47,6 +61,10 @@ export const data = [
     place: "통영시",
     attention: 13,
     chatting: 16,
+    username: "ㅎㅎ",
+    profile: profile1,
+    temp: 33,
+    content: "내용1",
   },
   {
     post_id: 5,
@@ -56,6 +74,10 @@ export const data = [
     place: "제주시",
     attention: 13,
     chatting: 16,
+    username: "ㅎㅎ",
+    profile: profile1,
+    temp: 33,
+    content: "내용1",
   },
   {
     post_id: 6,
@@ -65,6 +87,10 @@ export const data = [
     place: "통영시",
     attention: 13,
     chatting: 16,
+    username: "ㅎㅎ",
+    profile: profile1,
+    temp: 33,
+    content: "내용1",
   },
   {
     post_id: 7,
@@ -74,6 +100,10 @@ export const data = [
     place: "통영시",
     attention: 13,
     chatting: 16,
+    username: "ㅎㅎ",
+    profile: profile1,
+    temp: 33,
+    content: "내용7",
   },
   {
     post_id: 8,
@@ -83,6 +113,10 @@ export const data = [
     place: "통영시",
     attention: 13,
     chatting: 16,
+    username: "ㅎㅎ",
+    profile: profile1,
+    temp: 33,
+    content: "내용1",
   },
   {
     post_id: 9,
@@ -91,7 +125,10 @@ export const data = [
     price: 5000,
     place: "울산시",
     attention: 52,
-    chatting: 91,
+    username: "ㅎㅎ",
+    profile: profile1,
+    temp: 33,
+    content: "내용9",
   },
   {
     post_id: 10,
@@ -101,6 +138,10 @@ export const data = [
     place: "성주시",
     attention: 2,
     chatting: 1,
+    username: "ㅎㅎ",
+    profile: profile1,
+    temp: 33,
+    content: "내용1",
   },
   {
     post_id: 11,
@@ -110,6 +151,10 @@ export const data = [
     place: "울산시",
     attention: 52,
     chatting: 91,
+    username: "ㅎㅎ",
+    profile: profile1,
+    temp: 33,
+    content: "내용11",
   },
   {
     post_id: 12,
@@ -119,5 +164,9 @@ export const data = [
     place: "이대 멋사 짱 프론트 ♥️",
     attention: 2000,
     chatting: 16000,
+    username: "ㅎㅎg",
+    profile: profile1,
+    temp: 39,
+    content: "내용12",
   },
 ];
