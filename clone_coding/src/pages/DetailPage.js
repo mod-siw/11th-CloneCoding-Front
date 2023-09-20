@@ -5,18 +5,26 @@ import styled from "styled-components";
 //components
 import TopBar from "../components/TopBar";
 import MannerTemp from "../components/MannerTemp";
+import ImgCarousel from "../components/ImgCarousel";
 
 //data
 import { data } from "../_mock/mock_data";
 
+import cover1 from "../images/cover1.png";
+import cover2 from "../images/cover2.jpg";
+import cover3 from "../images/cover3.jpg";
+
 const DetailPage = () => {
   const navigate = useNavigate();
   const { post_id } = useParams();
+  const sample = [cover1, cover2, cover3];
 
   return (
     <Container>
       <TopBar />
-      <Cover src={data[post_id - 1].cover} />
+      <div style={{ width: "729px", margin: "0 auto" }}>
+        <ImgCarousel cover={data[post_id - 1].cover} />
+      </div>
       <InfoDiv>
         <UserInfo>
           <UserImg src={data[post_id - 1].profile} />
@@ -63,16 +71,6 @@ const Font = styled.div`
   font-style: normal;
   line-height: 100%; /* 15px */
   letter-spacing: -0.3px;
-`;
-
-const Cover = styled.img`
-  position: relative;
-  width: 677px;
-  height: 500px;
-  margin: 35px auto 0px;
-  border-radius: 8px;
-  overflow: hidden;
-  object-fit: cover;
 `;
 
 // 사용자 정보

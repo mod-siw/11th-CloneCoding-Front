@@ -16,7 +16,7 @@ import profile1 from "../images/profile_img/profile1.png";
 export const data = [
   {
     post_id: 1,
-    cover: cover1,
+    cover: [cover1, cover2, cover3],
     title: "먹태깡 팝니다",
     price: 1000,
     place: "진주시",

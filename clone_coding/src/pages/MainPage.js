@@ -58,14 +58,6 @@ const Container = styled.div`
   margin-top: 64px;
 `;
 
-const Font = styled.div`
-  color: #fff;
-  font-family: "Pretendard-Regular";
-  font-style: normal;
-  line-height: 100%; /* 15px */
-  letter-spacing: -0.3px;
-`;
-
 const Cover = styled.section`
   display: flex;
   align-items: center;
