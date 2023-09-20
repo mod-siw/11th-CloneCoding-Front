@@ -3,11 +3,34 @@ import { useNavigate, useParams } from "react-router-dom";
 import styled from "styled-components";
 
 //images
-import icon1 from "../images/mannertemp/bluesmile.png";
-import icon2 from "../images/mannertemp/greensmile.png"; //#329E46
+import icon1 from "../images/mannertemp/orangesmile.png";
+import icon2 from "../images/mannertemp/yellowsmile.png";
+import icon3 from "../images/mannertemp/greensmile.png";
+import icon4 from "../images/mannertemp/bluesmile.png";
+import icon5 from "../images/mannertemp/navybad.png";
 
 const MannerTemp = ({ tempnum }) => {
-  console.log(tempnum);
+  // 기본 색 및 아이콘 설정
+  let tempColor = "#1561a9";
+  let tempIconSrc = icon1;
+
+  // 온도에 따른 단계별 설정
+  if (tempnum <= 36.2) {
+    tempColor = "#0d3a65 "; //남색
+    tempIconSrc = icon5;
+  } else if (tempnum <= 38) {
+    tempColor = "#1561a9 "; // 20 이하일 때 파란색
+    tempIconSrc = icon4;
+  } else if (tempnum <= 42) {
+    tempColor = "#329E46"; // 40 이하일 때 초록색
+    tempIconSrc = icon3;
+  } else if (tempnum <= 50) {
+    tempColor = "#E6AA39"; // 60 이하일 때 노란색
+    tempIconSrc = icon2;
+  } else if (tempnum <= 100) {
+    tempColor = "#de5d06"; // 80 이하일 때 주황
+    tempIconSrc = icon1;
+  }
   return (
     <Box>
       <Container>

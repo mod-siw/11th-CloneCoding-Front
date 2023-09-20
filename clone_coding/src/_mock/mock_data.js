@@ -24,7 +24,7 @@ export const data = [
     chatting: 13,
     username: "ㅎㅎ",
     profile: profile1,
-    temp: 33,
+    temp: 36,
     content: "내용1",
   },
   {
@@ -37,7 +37,7 @@ export const data = [
     chatting: 17,
     username: "ㅎㅎ",
     profile: profile1,
-    temp: 33,
+    temp: 38,
     content: "내용1",
   },
   {
@@ -50,7 +50,7 @@ export const data = [
     chatting: 16,
     username: "ㅎㅎ",
     profile: profile1,
-    temp: 33,
+    temp: 42,
     content: "내용1",
   },
   {
@@ -63,7 +63,7 @@ export const data = [
     chatting: 16,
     username: "ㅎㅎ",
     profile: profile1,
-    temp: 33,
+    temp: 50,
     content: "내용1",
   },
   {
@@ -76,7 +76,7 @@ export const data = [
     chatting: 16,
     username: "ㅎㅎ",
     profile: profile1,
-    temp: 33,
+    temp: 100,
     content: "내용1",
   },
   {
