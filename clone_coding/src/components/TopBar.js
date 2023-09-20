@@ -6,6 +6,7 @@ import styled from "styled-components";
 
 //images
 import logo from "../images/logo.png";
+import searchingicon from "../images/searchingicon.png";
 
 const TopBar = () => {
   const navigate = useNavigate();
@@ -43,6 +44,7 @@ const TopBar = () => {
       </CateDiv>
       <SearchingDiv>
         <SearchingBar placeholder="물품이나 동네를 검색해보세요." />
+        <SearchingIcon src={searchingicon} />
         <ChattingBtn>채팅하기</ChattingBtn>
       </SearchingDiv>
     </Container>
@@ -61,12 +63,13 @@ const Container = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   background-color: #fff;
 
-  height: 35px;
-  width: 100%;
-  padding: 12px 20px;
+  max-width: 120rem;
+  height: 30px;
+  padding: 1.2rem 2rem;
+  margin: 0 auto;
 `;
 
 const Font = styled.div`
@@ -77,23 +80,31 @@ const Font = styled.div`
   letter-spacing: -0.3px;
 `;
 
-const CateDiv = styled.div`
+const CateDiv = styled.section`
   display: flex;
-  flex-direction: row;
   align-items: center;
+  width: 100%;
+
+  padding-right: 4rem;
 `;
 
 const Logo = styled.img`
-  width: 75px;
-  margin-right: 36px;
+  width: 65px;
+  align-items: center;
+  margin-right: 3.6rem;
 `;
 
 const Category = styled.ul`
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   width: 100%;
   margin: 0;
   padding: 0 40px 0 0;
+
+  @media (max-width: 767px) {
+    display: none;
+  }
 `;
 
 const CateLi = styled.li`
@@ -109,7 +120,7 @@ const CateLi = styled.li`
   color: ${(props) => (props.isSelected ? "#ff6f0f" : "#000")};
 `;
 
-const SearchingDiv = styled.div`
+const SearchingDiv = styled.section`
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -125,8 +136,23 @@ const SearchingBar = styled.input`
   border-radius: 6px;
   background-color: #f2f3f6;
   border: none;
-
   outline: none;
+
+  @media (max-width: 992px) {
+    display: none;
+  }
+`;
+const SearchingIcon = styled.img`
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+
+  border-radius: 50%;
+  border: none;
+
+  @media (min-width: 992px) {
+    display: none;
+  }
 `;
 
 const ChattingBtn = styled.button`
@@ -139,6 +165,7 @@ const ChattingBtn = styled.button`
   border: 1px solid #ced4da;
   color: #212529;
   text-align: center;
+  text-wrap: nowrap;
   font-weight: 700;
   background-color: #fff;
 

@@ -38,18 +38,16 @@ const DetailPage = () => {
       <ContentDiv>
         <Title>{data[post_id - 1].title}</Title>
         <div style={{ marginTop: "4px", display: "flex" }}>
-          <GrayText>기타 중고물품</GrayText>
-          {" ∙ "}
-          <GrayText>2일 전</GrayText>
+          <GrayText>기타 중고물품{" · "}2일 전</GrayText>
         </div>
         <Price>{data[post_id - 1].price}원</Price>
         <Content>{data[post_id - 1].content}</Content>
         <GrayText>
-          <GrayText>관심 {data[post_id - 1].attention}</GrayText>
-          {" ∙ "}
-          <GrayText>채팅 {data[post_id - 1].chatting}</GrayText>
-          {" ∙ "}
-          <GrayText>조회 976</GrayText>
+          <GrayText>
+            관심 {data[post_id - 1].attention}
+            {" · "}채팅 {data[post_id - 1].chatting}
+            {" · "}조회 976
+          </GrayText>
         </GrayText>
       </ContentDiv>
     </Container>
