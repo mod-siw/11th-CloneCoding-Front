@@ -23,7 +23,11 @@ const DetailPage = () => {
     <Container>
       <TopBar />
       <div style={{ width: "729px", margin: "0 auto" }}>
-        <ImgCarousel cover={data[post_id - 1].cover} />
+        {data[post_id - 1].isList ? (
+          <ImgCarousel cover={data[post_id - 1].cover} />
+        ) : (
+          <Cover src={data[post_id - 1].cover} />
+        )}
       </div>
       <InfoDiv>
         <UserInfo>
@@ -69,6 +73,16 @@ const Font = styled.div`
   font-style: normal;
   line-height: 100%; /* 15px */
   letter-spacing: -0.3px;
+`;
+
+const Cover = styled.img`
+  position: relative;
+  width: 677px;
+  height: 500px;
+  margin: 35px auto 0px;
+  border-radius: 8px;
+  overflow: hidden;
+  object-fit: cover;
 `;
 
 // 사용자 정보

@@ -4,9 +4,6 @@ import styled from "styled-components";
 
 //components
 
-//images
-// import cover from "../images/cover1.png";
-
 const DetailContent = ({ item }) => {
   const navigate = useNavigate();
   if (!item) {
@@ -19,7 +16,8 @@ const DetailContent = ({ item }) => {
 
   return (
     <Container onClick={() => handleDetailPage(item.post_id)}>
-      <Cover src={item.cover} />
+      {item.isList ? <Cover src={item.cover[0]} /> : <Cover src={item.cover} />}
+      {/* <Cover src={item.cover} /> */}
       <Text>
         <Title>{item.title}</Title>
         <Price>{item.price}원</Price>

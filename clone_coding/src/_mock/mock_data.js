@@ -16,6 +16,7 @@ import profile1 from "../images/profile_img/profile1.png";
 export const data = [
   {
     post_id: 1,
+    isList: true,
     cover: [cover1, cover2, cover3],
     title: "먹태깡 팝니다",
     price: 1000,
@@ -29,6 +30,7 @@ export const data = [
   },
   {
     post_id: 2,
+    isList: false,
     cover: cover2,
     title: "저와 함께하는 기린 인형",
     price: 12000,
@@ -42,6 +44,7 @@ export const data = [
   },
   {
     post_id: 3,
+    isList: false,
     cover: cover3,
     title: "눈여겨보고 있는 보조배터리",
     price: 1500,
@@ -55,6 +58,7 @@ export const data = [
   },
   {
     post_id: 4,
+    isList: false,
     cover: cover4,
     title: "티셔츠 팝니다",
     price: 1500,
@@ -68,6 +72,7 @@ export const data = [
   },
   {
     post_id: 5,
+    isList: false,
     cover: cover5,
     title: "무료나눔합니다",
     price: 1500,
@@ -81,6 +86,7 @@ export const data = [
   },
   {
     post_id: 6,
+    isList: false,
     cover: cover6,
     title: "표지 이쁜 책 팔아요",
     price: 1500,
@@ -94,6 +100,7 @@ export const data = [
   },
   {
     post_id: 7,
+    isList: false,
     cover: cover7,
     title: "헤어 앰플이어요",
     price: 1500,
