@@ -55,10 +55,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
+  margin-top: 64px;
 `;
 
 const Font = styled.div`

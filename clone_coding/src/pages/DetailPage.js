@@ -4,10 +4,7 @@ import styled from "styled-components";
 
 //components
 import TopBar from "../components/TopBar";
-
-//images
-import profile from "../images/profile_img/profile1.png";
-import cover from "../images/cover1.png";
+import MannerTemp from "../components/MannerTemp";
 
 //data
 import { data } from "../_mock/mock_data";
@@ -15,7 +12,6 @@ import { data } from "../_mock/mock_data";
 const DetailPage = () => {
   const navigate = useNavigate();
   const { post_id } = useParams();
-  console.log(post_id, data[post_id]);
 
   return (
     <Container>
@@ -29,14 +25,7 @@ const DetailPage = () => {
             <UserPlace>{data[post_id - 1].place}</UserPlace>
           </div>
         </UserInfo>
-        <MannerTemp>
-          <TempNum>{data[post_id - 1].temp}</TempNum>
-          <TempBar>
-            <TempColorbar></TempColorbar>
-          </TempBar>
-          <TempIcon />
-          <div>매너온도</div>
-        </MannerTemp>
+        <MannerTemp tempnum={data[post_id - 1].temp} />
       </InfoDiv>
       <ContentDiv>
         <Title>{data[post_id - 1].title}</Title>
@@ -65,10 +54,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
+  margin-top: 60px;
 `;
 
 const Font = styled.div`
@@ -131,18 +117,6 @@ const UserPlace = styled.div`
   letter-spacing: -0.6px;
   color: #212529;
 `;
-
-// 매너온도
-
-const MannerTemp = styled.section``;
-
-const TempNum = styled.div``;
-
-const TempBar = styled.div``;
-
-const TempColorbar = styled.div``;
-
-const TempIcon = styled.div``;
 
 // 글 관련
 
