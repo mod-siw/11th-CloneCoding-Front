@@ -10,14 +10,9 @@ import ImgCarousel from "../components/ImgCarousel";
 //data
 import { data } from "../_mock/mock_data";
 
-import cover1 from "../images/cover1.png";
-import cover2 from "../images/cover2.jpg";
-import cover3 from "../images/cover3.jpg";
-
 const DetailPage = () => {
   const navigate = useNavigate();
   const { post_id } = useParams();
-  const sample = [cover1, cover2, cover3];
 
   return (
     <Container>
@@ -42,7 +37,11 @@ const DetailPage = () => {
       <ContentDiv>
         <Title>{data[post_id - 1].title}</Title>
         <div style={{ marginTop: "4px", display: "flex" }}>
-          <GrayText>기타 중고물품{" · "}2일 전</GrayText>
+          <GrayText>
+            {data[post_id - 1].category}
+            {" · "}
+            {data[post_id - 1].date}
+          </GrayText>
         </div>
         <Price>{data[post_id - 1].price}원</Price>
         <Content>{data[post_id - 1].content}</Content>
@@ -50,7 +49,7 @@ const DetailPage = () => {
           <GrayText>
             관심 {data[post_id - 1].attention}
             {" · "}채팅 {data[post_id - 1].chatting}
-            {" · "}조회 976
+            {" · "}조회 {data[post_id - 1].view}
           </GrayText>
         </GrayText>
       </ContentDiv>

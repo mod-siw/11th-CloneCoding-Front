@@ -13,9 +13,25 @@ import cover from "../images/coverimg.png";
 import { data } from "../_mock/mock_data";
 
 const MainPage = () => {
-  const navigate = useNavigate();
-
   const [datalist, setDatalist] = useState(data);
+
+  // 더보기 데이터
+  const initialData = data.slice(0, 12);
+
+  const [visibleData, setVisibleData] = useState(initialData);
+  const [remainingData, setRemainingData] = useState(data.slice(12));
+
+  // "인기매물 더보기" 버튼 클릭 시 추가 데이터
+  const handleLoadMore = () => {
+    setVisibleData([...visibleData, ...remainingData]);
+    setRemainingData([]);
+    setLoadMoreVisible(false);
+  };
+
+  // "인기매물 더보기" 버튼 on off
+  const [loadMoreVisible, setLoadMoreVisible] = useState(
+    remainingData.length > 0
+  );
 
   return (
     <>
@@ -35,10 +51,15 @@ const MainPage = () => {
         <Content>
           <Text>중고거래 인기매물</Text>
           <ArticleList>
-            {datalist.map((item, index) => (
+            {visibleData.map((item, index) => (
               <DetailContent key={index} item={item} />
             ))}
           </ArticleList>
+          {loadMoreVisible && (
+            <LoadMoreButton onClick={handleLoadMore}>
+              인기매물 더보기
+            </LoadMoreButton>
+          )}
         </Content>
       </Container>
     </>
@@ -129,4 +150,8 @@ const ArticleList = styled.section`
 
   justify-content: center;
   margin: 40px auto;
+`;
+
+const LoadMoreButton = styled.div`
+  cursor: pointer;
 `;
