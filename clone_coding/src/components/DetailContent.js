@@ -23,9 +23,9 @@ const DetailContent = ({ item }) => {
         <Price>{item.price}원</Price>
         <Place>{item.place}</Place>
         <ReactionDiv>
-          <Attention>관심 {item.attention}</Attention>
-          {"  .  "}
-          <Chatting>채팅 {item.chatting}</Chatting>
+          <Attention>
+            관심 {item.attention} {"  .  "}채팅 {item.chatting}
+          </Attention>
         </ReactionDiv>
       </Text>
     </Container>
