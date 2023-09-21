@@ -146,7 +146,7 @@ const Title = styled.h1`
   text-overflow: ellipsis;
   margin-bottom: 2px;
   line-height: 1.5;
-  font-weight: normal;
+  font-weight: 900;
 `;
 
 const Price = styled.div`
