@@ -54,4 +54,7 @@ $ cd clone_coding
 $ npm i
 $ npm i styled-components
 $ npm install react-router-dom --save
+$ npm install react-slick
+$ npm install slick-carousel
+
 ```
